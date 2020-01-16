@@ -1,18 +1,51 @@
 <!DOCTYPE html>
 <html lang="en-US" ng-app="adonis">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <title>Adonis Sample</title>
-    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href='bower_components/bootstrap/dist/css/bootstrap.min.css'>
+    <link rel="stylesheet" href='bower_components/ionicons/docs/css/ionicons.min.css'>
+    <link rel="stylesheet" href="bower_components/AngularJS-Toaster/toaster.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-	<div class="container">
-		<div class="col-md-3" style="text-align: center;margin-top:20%; font-size:30px;">
-			<p>Adonis Sample Project</p>
-		</div>
-	</div>
+    <div class="container" ng-controller="user">
+        <section class="content">
+            <div class="row margin">
+                <div class="col-md-12" style="text-align: center;margin-top:10%; font-size:30px;">
+                    <p>Adonis Sample Project</p>
+                </div>
+            </div>
+            <div class="row margin">
+                <form role="form" name="userForm" novalidate>
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <input type="text" name="username" class='form-control' autocomplete="off" ng-model='user.email'>
+                        </div>
+                        <div class="col-md-12 form-group">
+                            <button type="submit" class="btn btn-primary btn-block" ng-click="addUser(user)">Add User</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
 </body>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+<script src="bower_components/angular-resource/angular-resource.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="bower_components/AngularJS-Toaster/toaster.min.js"></script>
+<script src="app.js"></script>
+<script src="js/routes.js"></script>
+<script src="js/controllers/user.js"></script>
+
 </html>
-<script type="text/javascript" src="app.js"></script>

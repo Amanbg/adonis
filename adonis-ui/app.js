@@ -1,15 +1,14 @@
-angular
-    .module('adonis', [
+angular.module('adonis', [
         'ui.router',
         'adonis.controllers',
-        'ngSanitize',
-        'ngResource',
-        'adonis.services',
+        //'ngSanitize',
+        //'ngResource',
+        //'adonis.services',
         'toaster',
-        'ngAnimate',
-        'adonis.directives',
-        'adonis.env'
+        //'ngAnimate',
+        //'adonis.env'
     ])
-    .run(['$rootScope', '$state', '$window', '$cookies', '$timeout', '$document', '$location', 'ENV', '$translate', 'Requests', 'editableOptions', 'editableThemes', '$http', 'UiLogService', function($rootScope, $state, $window, $cookies, $timeout, $document, $location, ENV, $translate, Requests, editableOptions, editableThemes, $http, UiLogService) {
+    .run(['$rootScope', '$state', '$window', '$timeout', '$document', '$location', '$http', function($rootScope, $state, $window, $timeout, $document, $location, $http) {
 
-    }])angular.module('adonis.controllers', [])
+    }]);
+angular.module('adonis.controllers', [])

@@ -22,6 +22,7 @@
     "jquery": "^3.4.1",
     "angular-sanitize": "^1.7.9",
     "jquery-ui": "^1.12.1",
-    "ionicons": "^4.6.3"
+    "ionicons": "^4.6.3",
+    "AngularJS-Toaster": "^3.0.0"
   }
 }

@@ -1,21 +1,11 @@
-angular.module('adonis').config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider', '$translateProvider', function($stateProvider,
-    $urlRouterProvider, $locationProvider, $httpProvider, $translateProvider) {
-    $httpProvider.interceptors.push(interceptor);
+angular.module('adonis').config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider', function($stateProvider,
+    $urlRouterProvider, $locationProvider, $httpProvider) {
     $stateProvider
         .state("home", {
             url: '/home',
             views: {
                 "mainContent": {
                     'templateUrl': "index.html"
-                },
-                "sidebar": {
-                    'templateUrl': "views/sidebar.html"
-                },
-                "header": {
-                    'templateUrl': "views/header.html"
-                },
-                "footer": {
-                    'templateUrl': "views/footer.html"
                 }
             }
         })
@@ -94,12 +84,4 @@ angular.module('adonis').config(['$stateProvider', '$urlRouterProvider', '$locat
                 }
             }
         })
-
-    $translateProvider.useStaticFilesLoader({
-        prefix: '/resources/locale/locale-',
-        suffix: '.json'
-    })
-    $translateProvider.preferredLanguage('en');
-    $translateProvider.useSanitizeValueStrategy('sceParameters');
-    $urlRouterProvider.otherwise('/');
 }])

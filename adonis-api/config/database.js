@@ -29,13 +29,13 @@ module.exports = {
   | npm i --save sqlite3
   |
   */
-  sqlite: {
-    client: 'sqlite3',
-    connection: {
-      filename: Helpers.databasePath(`${Env.get('DB_DATABASE', 'development')}.sqlite`)
-    },
-    useNullAsDefault: true
-  },
+  // sqlite: {
+  //   client: 'sqlite3',
+  //   connection: {
+  //     filename: Helpers.databasePath(`${Env.get('DB_DATABASE', 'development')}.sqlite`)
+  //   },
+  //   useNullAsDefault: true
+  // },
 
   /*
   |--------------------------------------------------------------------------

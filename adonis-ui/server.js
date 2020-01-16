@@ -13,6 +13,11 @@ app.use(serveStatic(__dirname, {
     'index': ['index.html', 'index.htm']
 }))
 
+// const APP_URL = 'localhost:3333'
+// app.post(APP_URL+'/user', function(req, res, next) {
+//     console.log('resosss====>',res);
+// });
+
 app.listen(PORT, function() {
     console.log('App listening on port ' + PORT + '!');
 });
