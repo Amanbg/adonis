@@ -15,6 +15,7 @@
 <body>
     <div class="container" ng-controller="user">
         <section class="content">
+            <toaster-container toaster-options="{'position-class': 'toast-top-right','close-button': true,'time-out': 10000}"></toaster-container>
             <div class="row margin">
                 <div class="col-md-12" style="text-align: center;margin-top:10%; font-size:30px;">
                     <p>Adonis Sample Project</p>
@@ -32,18 +33,38 @@
                     </div>
                 </form>
             </div>
+            <div class="row margin">
+                <div class="col-md-12">
+                    <table class="table table-bordered giftlogtable">
+                        <tbody>
+                            <tr>
+                                <th>Id</th>
+                                <th>Username</th>
+                                <th>Date</th>
+                            </tr>
+                            <tr ng-repeat="user in userList">
+                                <td><span class="text-indent">{{user.id}}</span></td>
+                                <td>{{user.email}}</td>
+                                <td>{{user.created_at | date}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </section>
     </div>
 </body>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
 <script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
 <script src="bower_components/angular-resource/angular-resource.min.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="bower_components/angular-animate/angular-animate.min.js"></script>
 <script src="bower_components/AngularJS-Toaster/toaster.min.js"></script>
+<script src="bower_components/crypto/crypto.min.js"></script>
 <script src="app.js"></script>
 <script src="js/routes.js"></script>
 <script src="js/controllers/user.js"></script>

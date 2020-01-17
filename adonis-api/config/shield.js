@@ -28,6 +28,7 @@ module.exports = {
     |
     */
     directives: {
+      defaultSrc: ['self', '*']
     },
     /*
     |--------------------------------------------------------------------------
@@ -95,7 +96,7 @@ module.exports = {
   |
   | Learn more at https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
   */
-  xframe: 'DENY',
+  xframe: 'SAMEORIGIN',
 
   /*
   |--------------------------------------------------------------------------
@@ -132,7 +133,7 @@ module.exports = {
   |
   */
   csrf: {
-    enable: true,
+    enable: false,
     methods: ['POST', 'PUT', 'DELETE'],
     filterUris: [],
     cookieOptions: {

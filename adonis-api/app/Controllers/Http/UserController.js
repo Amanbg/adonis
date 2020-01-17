@@ -1,15 +1,19 @@
 'use strict'
 
-const User = use('app/Models/User')
+const User = use('App/Models/User')
 class UserController {
-	user({request, response}){
-		console.log('reuqest==>',request.data)
-		const user = new User;
-		user.email = request.data.data.email;
-		await user.save();
+  async user({ request, response }) {
+    const user = new User;
+    user.email = request._body.data.email;
+    await user.save();
 
-		return response;
-	}
+    return { user: user.toJSON() };
+  }
+
+  async users({ request, response }) {
+    const users = await User.all()
+    return users;
+  }
 }
 
 module.exports = UserController
